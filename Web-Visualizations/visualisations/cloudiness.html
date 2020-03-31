@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- We need a link for bootstrap -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"crossorigin="anonymous" >
+     <!-- <our css link stylesheet> -->
+     <link rel="stylesheet" href="C:\Users\meagc\Desktop\WUSTL-STL-DATA-PT-10-2019-U-C\11-Web\Homework\Instructions\Resources\style.css" media="screen">
+     <!-- And we need a link for CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+     <title>Cloudiness</title>
+
+</head>
+<body class="body">
+    <nav class="navbar navbar-default">
+        <!-- <div class="cointainer-fluid"> -->
+            <div class="navbar-header">
+                <button type="button" class="btn btn-outline-primary">Weather Viz
+                    <img src="data:image/jpeg;base64,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" width="30" height="30" class="d-inline-block align-top" alt="">
+                </button>
+            </div>
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Comparisons</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Data</a>
+                </li>
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             Plots
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Temperature</a>
+                            <a class="dropdown-item" href="#">Humidity</a>
+                            <a class="dropdown-item" href="#">Cloudiness</a>
+                            <a class="dropdown-item" href="#">Wind Speed</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        <!-- </div> -->
+    </nav>
+    <!-- container -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                    <h1 class="yellow">Cloudiness</h1>
+                    <hr class="about-hr"/>
+            </div>
+        </div>
+        <section class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="temp-img">
+                    <img src="assets/images/Fig3.png" class="viz-img" alt=""/>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <article class="paragraph-content">
+                    <div class="row justify-content-end">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- other graphs -->
+        <div id="chart-nav-box">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <div class="yellow">
+                        <h3 class="row justify-content-center">More Charts</h3>
+                        <hr />
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="charts">
+                            <a href="visualizations/temp.html"><img src="C:\Users\meagc\Desktop\WUSTL-STL-DATA-PT-10-2019-U-C\11-Web\Homework\Instructions\Resources\assets\images\Fig1.png" alt="Latitude vs. Max Temperature" class="chart-png"></a>
+                            <a href="visualizations/humidity.html"><img src="C:\Users\meagc\Desktop\WUSTL-STL-DATA-PT-10-2019-U-C\11-Web\Homework\Instructions\Resources\assets\images\Fig2.png" alt="Latitude vs. Humidity" class="chart-png"></a>
+                            <a href="visualizations/cloudiness.html"><img src="C:\Users\meagc\Desktop\WUSTL-STL-DATA-PT-10-2019-U-C\11-Web\Homework\Instructions\Resources\assets\images\Fig3.png" alt="Latitude vs. Cloudiness" class="chart-png"></a>
+                            <a href="visualizations/wind.html"><img src="C:\Users\meagc\Desktop\WUSTL-STL-DATA-PT-10-2019-U-C\11-Web\Homework\Instructions\Resources\assets\images\Fig4.png" alt="Latitude vs. Wind Speed" class="chart-png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
